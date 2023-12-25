@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buone feste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>
+         window.addEventListener("load", function () {
+  const loadingScreen = document.getElementById("loading_screen");
+  loadingScreen.style.display = "none";
+});
+    </script>
+    <div id="loading_screen">
+        <h2>Buone feste!</h2>
+      </div>
+    <div class="bodysfondo" id="foto">
+    </div>
+    <audio id="song" src="img/canzonenatale.mp3">
+
+    </audio>
+
+    <script>
+
+let isPlaying = false;
+const song = document.getElementById("song");
+
+window.addEventListener('click', function () {
+    if (isPlaying) {
+        song.pause();
+        isPlaying = false;
+    } else {
+        song.play();
+        isPlaying = true;
+    }
+});
+
+    </script>
+</body>
+
+</html>
